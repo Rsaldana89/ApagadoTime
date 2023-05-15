@@ -4,11 +4,11 @@ import ctypes
 import subprocess
 import sys
 
-# Verificar si el script se está ejecutando en una consola de comandos o directamente
+   # Establecer la ventana principal de la consola de comandos como oculta
 if hasattr(sys, 'frozen'):
-    # Establecer la ventana principal de la aplicación como oculta
+    
     ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
-
+   # Se define el mensaje a mostrar si se presiona un boton
 def mostrar_mensaje():
     etiqueta.config(text="TAMBIEN PUEDES CANCELAR EL APAGADO")
     etiqueta.config(fg="white")
